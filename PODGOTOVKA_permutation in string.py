@@ -10,13 +10,18 @@ class Solution:
                 cntr[s2[i]] -= 1
                 if cntr[s2[i]] == 0:
                     matched += 1
-            if i >= w and s2[ i -w] in cntr:
+            if i >= w and s2[i -w] in cntr:
+                matched -= 1
                 if cntr[s2[ i -w]] == 0:
-                    matched -= 1
+                    pass
                 cntr[s2[ i -w]] += 1
 
             if matched == len(cntr):
                 return True
 
         return False
-print(1)
+s1 = "ab"
+s2 = "eidbcaooo"
+
+a = Solution()
+print(a.checkInclusion(s1,s2))

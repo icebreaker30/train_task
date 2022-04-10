@@ -12,4 +12,6 @@ def palidrom(s):
 			return False
 	return True
 
-print()
+
+s = "A man, a plan, a canal: Panama"
+print(palidrom(s))
