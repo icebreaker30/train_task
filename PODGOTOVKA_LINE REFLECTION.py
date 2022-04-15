@@ -17,7 +17,7 @@ class Solution3(object):
 
         mid = (min_x + max_x) / 2
 
-        print(mid)
+        print(dictionary)
         for x, y in points:
             if y  not in dictionary[2*mid - x]:
                 return False

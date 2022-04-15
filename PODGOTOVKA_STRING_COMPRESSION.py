@@ -1,5 +1,5 @@
 
-chars = ['a','a']
+chars = ["a","a","b","b","c","c","c"]
 
 s = []
 l = r = 0
@@ -17,5 +17,6 @@ while r < len(chars):
     l = r
 
 chars[:] = s
+
 print(chars)
 print(len(s))
