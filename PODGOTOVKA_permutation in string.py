@@ -1,4 +1,3 @@
-
 class Solution:
     def checkInclusion(self, s1, s2):
         w, matched = len(s1), 0
@@ -10,18 +9,17 @@ class Solution:
                 cntr[s2[i]] -= 1
                 if cntr[s2[i]] == 0:
                     matched += 1
-            if i >= w and s2[i -w] in cntr:
-                matched -= 1
-                if cntr[s2[ i -w]] == 0:
-                    pass
-                cntr[s2[ i -w]] += 1
+            if i >= w and s2[i - w] in cntr:
+
+                if cntr[s2[i - w]] == 0:
+                    matched -= 1
+                cntr[s2[i - w]] += 1
 
             if matched == len(cntr):
                 return True
-
         return False
 s1 = "ab"
-s2 = "eidbcaooo"
+s2 = "eidbaooo"
 
 a = Solution()
 print(a.checkInclusion(s1,s2))
