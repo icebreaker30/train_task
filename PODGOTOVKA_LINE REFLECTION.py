@@ -9,7 +9,8 @@ class Solution3(object):
                  Обратите внимание, что значение dict является набором
         """
         from collections import defaultdict
-        dictionary, max_x, min_x = defaultdict(set), -float('inf'), float('inf')
+        dictionary, max_x, min_x = \
+            defaultdict(set), -float('inf'), float('inf')
         for x, y in points:
             max_x = max(max_x, x)
             min_x = min(min_x, x)
